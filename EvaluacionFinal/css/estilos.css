@@ -6,27 +6,37 @@ body{
 header{
   background-color: #5b7989;
   border-radius:  10px 10px 0px 0px;
-  display: flex;
-  align-items: center;
   color: white;
   text-shadow: 2px 2px #02010a;
-  justify-content: space-between;
-
-
 }
-header h1{
-  margin-left: 20px;
-}
+
 
 header nav a {
 
-	color:white;
+  color:white;
   text-decoration:none;
   text-shadow: 2px 2px #02010a;
-	font-size:20px;
-  margin-right: 30px;
-	font-weight:bold;
+  font-size:20px;
 }
+.cabecera{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+.cabecera > div{
+  width: 50%;
+
+}
+.titulo{
+  margin-left: 30px;
+}
+.navegacion{
+    word-spacing: 20px;
+    text-align: right;
+    margin-right: 60px;
+}
+
 
 #contenido{
  width: 900px;
@@ -37,26 +47,29 @@ header nav a {
 }
 #imagenCentral{
   background-color: #82c3a6;
-
-}
-#imagenCentral img{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding-top: 20px;
   padding-bottom: 20px;
 
-
 }
+
 
 #imagenSecundaria{
   background-color: #d5c75f;
   display: flex;
-  border: 1px;
+  flex-direction: row;
+  justify-content: center;
+
 }
 #imagenSecundaria > div{
   width: 50%;
   padding: 30px;
+
+}
+img{
+  box-shadow: 2px 2px #02010a;
 }
 
 
@@ -67,11 +80,63 @@ footer{
 }
 
 .piePagina{
-	display: flex;
-	flex-direction:row;
+  display: flex;
+  flex-direction:row;
   justify-content: center;
 
 }
 .piePagina > div{
   padding: 10px;
+}
+
+.paisaje{
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.retrato{
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+@media (min-width:900px){
+
+}
+
+@media (max-width:900px){
+  #contenido{
+    width: 100%;
+  }
+  .cabecera{
+   flex-direction: column;
+  }
+  .titulo{
+
+    text-align: center;
+  }
+  .navegacion{
+    word-spacing: 10px;
+    text-align: center;
+  }
+  #imagenCentral img{
+    width: 80%;
+  }
+
+
+  #imagenSecundaria{
+    flex-direction: column;
+  }
+  #imagenSecundaria div img{
+    width: 150%
+  }
+
+  .piePagina{
+    flex-direction: column;
+    text-align: center;
+  }
+
 }
