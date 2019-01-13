@@ -8,6 +8,8 @@ header{
   border-radius:  10px 10px 0px 0px;
   color: white;
   text-shadow: 2px 2px #02010a;
+  animation-duration: 3s;
+  animation-name: slidein;
 }
 
 
@@ -166,9 +168,7 @@ footer{
 }
 
 
-@media (min-width:900px){
 
-}
 
 @media (max-width:900px){
   #contenido{
@@ -210,4 +210,15 @@ footer{
     max-width: 50%;
   }
 
+}
+@keyframes slidein {
+  0% {
+    margin-top: 150%;
+  }
+  60% {
+    margin-top: -5%;
+  }
+  100% {
+    margin-top: 0%;
+  }
 }
